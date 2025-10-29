@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dobokhe7hhpjo"]
+[gd_scene load_steps=5 format=3 uid="uid://dobokhe7hhpjo"]
 
 [ext_resource type="Script" uid="uid://dq8t2ecpk0cn3" path="res://scripts/ui/menu_buttons.gd" id="1_g3w80"]
+[ext_resource type="Script" uid="uid://ump6ae46fwg6" path="res://scripts/levels/menu.gd" id="1_k3l6u"]
+[ext_resource type="Script" uid="uid://ekk5of5gkpb0" path="res://scripts/ui/timer.gd" id="3_tmk6g"]
+[ext_resource type="Script" uid="uid://bhq6ktw3yqqw7" path="res://scripts/ui/song_update.gd" id="4_oosx4"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_k3l6u")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -52,6 +56,20 @@ grow_vertical = 2
 text = "Play Music"
 icon_alignment = 1
 expand_icon = true
+
+[node name="Timer" type="Label" parent="."]
+offset_left = 476.0
+offset_top = 10.0
+offset_right = 530.0
+offset_bottom = 33.0
+text = "Timer: "
+script = ExtResource("3_tmk6g")
+
+[node name="SongUpdate" type="Label" parent="."]
+offset_right = 329.0
+offset_bottom = 37.0
+text = "playing: "
+script = ExtResource("4_oosx4")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start_Game" to="MarginContainer/VBoxContainer" method="_on_start_game_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
