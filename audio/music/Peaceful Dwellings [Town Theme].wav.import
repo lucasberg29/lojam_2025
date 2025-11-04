@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0cm1ow6l7n6n"
+path="res://.godot/imported/Peaceful Dwellings [Town Theme].wav-8b9fd999838cbc99aeb8b5a7b6edb206.sample"
+
+[deps]
+
+source_file="res://audio/music/Peaceful Dwellings [Town Theme].wav"
+dest_files=["res://.godot/imported/Peaceful Dwellings [Town Theme].wav-8b9fd999838cbc99aeb8b5a7b6edb206.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

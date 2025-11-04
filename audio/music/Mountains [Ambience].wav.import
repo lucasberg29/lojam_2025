@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dutvpkudgwc52"
+path="res://.godot/imported/Mountains [Ambience].wav-36e4c5016f25def29584dd1f52c65cfb.sample"
+
+[deps]
+
+source_file="res://audio/music/Mountains [Ambience].wav"
+dest_files=["res://.godot/imported/Mountains [Ambience].wav-36e4c5016f25def29584dd1f52c65cfb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

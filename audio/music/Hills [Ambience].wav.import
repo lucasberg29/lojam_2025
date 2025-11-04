@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd3x7gx2dmka6"
+path="res://.godot/imported/Hills [Ambience].wav-483362672646fc2259c950ea21d925d6.sample"
+
+[deps]
+
+source_file="res://audio/music/Hills [Ambience].wav"
+dest_files=["res://.godot/imported/Hills [Ambience].wav-483362672646fc2259c950ea21d925d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

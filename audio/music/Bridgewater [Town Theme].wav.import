@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmwfby70gb6n4"
+path="res://.godot/imported/Bridgewater [Town Theme].wav-87ae5895887ddd3b6af3646eda25e7f5.sample"
+
+[deps]
+
+source_file="res://audio/music/Bridgewater [Town Theme].wav"
+dest_files=["res://.godot/imported/Bridgewater [Town Theme].wav-87ae5895887ddd3b6af3646eda25e7f5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

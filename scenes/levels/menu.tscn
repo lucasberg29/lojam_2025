@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dobokhe7hhpjo"]
+[gd_scene load_steps=12 format=3 uid="uid://dobokhe7hhpjo"]
 
 [ext_resource type="Script" uid="uid://dq8t2ecpk0cn3" path="res://scripts/ui/menu_buttons.gd" id="1_g3w80"]
 [ext_resource type="Script" uid="uid://ump6ae46fwg6" path="res://scripts/levels/menu.gd" id="1_k3l6u"]
 [ext_resource type="Script" uid="uid://ekk5of5gkpb0" path="res://scripts/ui/timer.gd" id="3_tmk6g"]
+[ext_resource type="Script" uid="uid://c5s45p47q0hrj" path="res://scripts/ui/music_panel.gd" id="4_dexxl"]
 [ext_resource type="Script" uid="uid://bhq6ktw3yqqw7" path="res://scripts/ui/song_update.gd" id="4_oosx4"]
+[ext_resource type="Texture2D" uid="uid://ch70reu24dxfy" path="res://assets/kenney_game-icons/PNG/White/1x/fastForward.png" id="5_apwh8"]
+[ext_resource type="Texture2D" uid="uid://8s87p4clijw" path="res://assets/kenney_game-icons/PNG/White/1x/previous.png" id="5_lt4mj"]
+[ext_resource type="Texture2D" uid="uid://jpoalelu32p3" path="res://assets/kenney_game-icons/PNG/White/1x/next.png" id="6_dexxl"]
+[ext_resource type="Texture2D" uid="uid://dlc1b5mriqgrr" path="res://assets/kenney_game-icons/PNG/White/1x/forward.png" id="7_dnrjr"]
+[ext_resource type="Texture2D" uid="uid://cmkq0pbqe5thx" path="res://assets/kenney_game-icons/PNG/White/1x/pause.png" id="8_varmo"]
+[ext_resource type="Texture2D" uid="uid://b8pjv3lcsi223" path="res://assets/kenney_game-icons/PNG/White/1x/rewind.png" id="10_swjeh"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_k3l6u")
@@ -65,11 +72,74 @@ offset_bottom = 33.0
 text = "Timer: "
 script = ExtResource("3_tmk6g")
 
-[node name="SongUpdate" type="Label" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_right = 341.0
+offset_bottom = 86.0
+script = ExtResource("4_dexxl")
+
+[node name="SongUpdate" type="Label" parent="Panel"]
+layout_mode = 0
 offset_right = 329.0
 offset_bottom = 37.0
 text = "playing: "
 script = ExtResource("4_oosx4")
 
+[node name="Previous" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 44.0
+offset_right = 125.0
+offset_bottom = 82.0
+icon = ExtResource("5_lt4mj")
+expand_icon = true
+
+[node name="Next" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 44.0
+offset_right = 251.0
+offset_bottom = 82.0
+icon = ExtResource("6_dexxl")
+expand_icon = true
+
+[node name="PlayResume" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 44.0
+offset_right = 209.0
+offset_bottom = 82.0
+icon = ExtResource("7_dnrjr")
+expand_icon = true
+
+[node name="Pause" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 44.0
+offset_right = 167.0
+offset_bottom = 82.0
+icon = ExtResource("8_varmo")
+expand_icon = true
+
+[node name="FastForward" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 44.0
+offset_right = 292.0
+offset_bottom = 82.0
+icon = ExtResource("5_apwh8")
+expand_icon = true
+
+[node name="FastBackward" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 44.0
+offset_right = 84.0
+offset_bottom = 82.0
+icon = ExtResource("10_swjeh")
+expand_icon = true
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start_Game" to="MarginContainer/VBoxContainer" method="_on_start_game_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Panel/Next" to="Panel" method="_on_next_pressed"]
+[connection signal="pressed" from="Panel/PlayResume" to="Panel" method="_on_play_resume_pressed"]
+[connection signal="pressed" from="Panel/Pause" to="Panel" method="_on_pause_pressed"]
