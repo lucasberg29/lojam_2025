@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5x4ioycl6rd4"]
+
+[ext_resource type="Script" uid="uid://foilbhq7tomq" path="res://scripts/interactables/egg.gd" id="1_et1g5"]
+[ext_resource type="Shader" uid="uid://pvjmeyv6hrdu" path="res://shaders/egg.gdshader" id="2_710o2"]
+[ext_resource type="Texture2D" uid="uid://cxrnt1hks2f5y" path="res://assets/Solid Eggs/White.png" id="2_et1g5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jonnm"]
+shader = ExtResource("2_710o2")
+shader_parameter/glow_color = Vector4(3, 3, 2.9, 1)
+shader_parameter/glow_size = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_710o2"]
+radius = 16.0
+
+[sub_resource type="Animation" id="Animation_710o2"]
+resource_name = "pick_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.46923077, 0.46923077), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jonnm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.46923077, 0.46923077)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jonnm"]
+_data = {
+&"RESET": SubResource("Animation_jonnm"),
+&"pick_up": SubResource("Animation_710o2")
+}
+
+[node name="Egg" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_et1g5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jonnm")
+scale = Vector2(0.46923077, 0.46923077)
+texture = ExtResource("2_et1g5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_710o2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jonnm")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

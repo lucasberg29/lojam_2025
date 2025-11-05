@@ -53,3 +53,6 @@ func update_movement(delta: float):
 
 	move_and_slide()
 	current_velocity = velocity
+
+func pick_up_egg():
+	pass

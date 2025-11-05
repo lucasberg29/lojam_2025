@@ -1,28 +1,44 @@
-[gd_scene load_steps=12 format=3 uid="uid://dobokhe7hhpjo"]
+[gd_scene load_steps=18 format=3 uid="uid://dobokhe7hhpjo"]
 
 [ext_resource type="Script" uid="uid://dq8t2ecpk0cn3" path="res://scripts/ui/menu_buttons.gd" id="1_g3w80"]
 [ext_resource type="Script" uid="uid://ump6ae46fwg6" path="res://scripts/levels/menu.gd" id="1_k3l6u"]
+[ext_resource type="Texture2D" uid="uid://dyf6wd7hvvhkn" path="res://assets/Jungle-GUI-PNG/PNG/menu/bg.png" id="3_dnrjr"]
 [ext_resource type="Script" uid="uid://ekk5of5gkpb0" path="res://scripts/ui/timer.gd" id="3_tmk6g"]
 [ext_resource type="Script" uid="uid://c5s45p47q0hrj" path="res://scripts/ui/music_panel.gd" id="4_dexxl"]
 [ext_resource type="Script" uid="uid://bhq6ktw3yqqw7" path="res://scripts/ui/song_update.gd" id="4_oosx4"]
+[ext_resource type="Texture2D" uid="uid://ch4ge2sr8br2t" path="res://assets/Jungle-GUI-PNG/PNG/upgrade/bg.png" id="4_varmo"]
 [ext_resource type="Texture2D" uid="uid://ch70reu24dxfy" path="res://assets/kenney_game-icons/PNG/White/1x/fastForward.png" id="5_apwh8"]
 [ext_resource type="Texture2D" uid="uid://8s87p4clijw" path="res://assets/kenney_game-icons/PNG/White/1x/previous.png" id="5_lt4mj"]
+[ext_resource type="Texture2D" uid="uid://dlo202qnfcto1" path="res://assets/Jungle-GUI-PNG/PNG/shop/bg.png" id="5_swjeh"]
 [ext_resource type="Texture2D" uid="uid://jpoalelu32p3" path="res://assets/kenney_game-icons/PNG/White/1x/next.png" id="6_dexxl"]
 [ext_resource type="Texture2D" uid="uid://dlc1b5mriqgrr" path="res://assets/kenney_game-icons/PNG/White/1x/forward.png" id="7_dnrjr"]
 [ext_resource type="Texture2D" uid="uid://cmkq0pbqe5thx" path="res://assets/kenney_game-icons/PNG/White/1x/pause.png" id="8_varmo"]
 [ext_resource type="Texture2D" uid="uid://b8pjv3lcsi223" path="res://assets/kenney_game-icons/PNG/White/1x/rewind.png" id="10_swjeh"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dnrjr"]
+texture = ExtResource("4_varmo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gahmf"]
+texture = ExtResource("5_swjeh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swjeh"]
+texture = ExtResource("5_swjeh")
+
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_k3l6u")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(488, 259)
+texture = ExtResource("3_dnrjr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 200.0
-offset_top = 216.0
-offset_right = 673.61
-offset_bottom = 395.0
+offset_left = 348.0
+offset_top = 248.0
+offset_right = 821.61
+offset_bottom = 427.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -36,16 +52,22 @@ script = ExtResource("1_g3w80")
 [node name="Start_Game" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_dnrjr")
 text = "Start Game"
 
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_gahmf")
 text = "Settings"
 
 [node name="Quit_Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_swjeh")
 text = "Quit"
 
 [node name="Play_Stop Music" type="CheckButton" parent="."]
@@ -54,10 +76,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 378.0
-offset_top = 448.0
-offset_right = 497.0
-offset_bottom = 544.0
+offset_left = 497.0
+offset_top = 482.0
+offset_right = 639.0
+offset_bottom = 583.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play Music"
@@ -65,16 +87,19 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Timer" type="Label" parent="."]
-offset_left = 476.0
-offset_top = 10.0
-offset_right = 530.0
-offset_bottom = 33.0
+offset_left = 34.0
+offset_top = 32.0
+offset_right = 88.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.06053035, 0.06053035, 0.060530342, 1)
 text = "Timer: "
 script = ExtResource("3_tmk6g")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 341.0
-offset_bottom = 86.0
+offset_left = 391.0
+offset_top = 60.0
+offset_right = 732.0
+offset_bottom = 146.0
 script = ExtResource("4_dexxl")
 
 [node name="SongUpdate" type="Label" parent="Panel"]
