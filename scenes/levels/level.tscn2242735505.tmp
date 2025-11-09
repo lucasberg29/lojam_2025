@@ -377,7 +377,7 @@ sources/0 = SubResource("TileSetAtlasSource_b2cq8")
 [node name="Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_377w7")]
-position = Vector2(750, -70)
+position = Vector2(-22.999985, -2.9999695)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_377w7")
@@ -410,7 +410,7 @@ texture = ExtResource("6_icy5c")
 texture = ExtResource("7_rmjfq")
 
 [node name="EnemyBaryonyx" parent="." instance=ExtResource("9_rmjfq")]
-position = Vector2(1106, 9)
+position = Vector2(1058, 10)
 
 [node name="EnemyManager" parent="." instance=ExtResource("9_icy5c")]
 enemies_paths = Array[NodePath]([NodePath("../EnemyBaryonyx")])

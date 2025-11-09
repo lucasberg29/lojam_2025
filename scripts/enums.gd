@@ -4,6 +4,7 @@ extends Resource
 
 class_name Enums
 
-enum EnemyType { Alanqa, Baryonyx, Carnotaurus, Oviraptor, Styracosaurus }
-enum ItemType { Egg, POTION, KEY }
-enum PowerUpType { Speed, Invincibility, Double_damage }
+enum EnemyType { alanqa, baryonyx, carnotaurus, oviraptor, styracosaurus }
+enum ItemType { egg, potion, key }
+enum PowerUpType { speed, invincibility, double_damage }
+enum Behaviour { idle, wandering_left, wandering_right, attacking}

@@ -1,38 +1,39 @@
-[gd_scene load_steps=67 format=3 uid="uid://dyvac3uaaiupl"]
+[gd_scene load_steps=68 format=3 uid="uid://cmnntpmpninp4"]
 
-[ext_resource type="Texture2D" uid="uid://c0jkblal7ygsr" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_000.png" id="1_w0ky3"]
-[ext_resource type="Texture2D" uid="uid://da5fmc7w68653" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_001.png" id="2_ksqmq"]
-[ext_resource type="Texture2D" uid="uid://nkvodlmss8qg" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_003.png" id="3_8e52f"]
-[ext_resource type="Texture2D" uid="uid://bnw752n2e43is" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_002.png" id="3_ksqmq"]
-[ext_resource type="Texture2D" uid="uid://b074ijagsh4v3" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_004.png" id="4_mxrkf"]
-[ext_resource type="Texture2D" uid="uid://4tayv6pte0hy" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_005.png" id="5_jmxl0"]
-[ext_resource type="Texture2D" uid="uid://bavy5v7eoukxk" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_006.png" id="6_60ha2"]
-[ext_resource type="Texture2D" uid="uid://curtswegrx37d" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_000.png" id="8_5hkcg"]
-[ext_resource type="Texture2D" uid="uid://bqt1nixbhl3oi" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_001.png" id="9_xdoo8"]
-[ext_resource type="Texture2D" uid="uid://de2a6b0tapo04" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_002.png" id="10_ltw38"]
-[ext_resource type="Texture2D" uid="uid://417upc7cpfyg" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_003.png" id="11_wx8h6"]
-[ext_resource type="Texture2D" uid="uid://b3rst0sb7348a" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_004.png" id="12_uv12y"]
-[ext_resource type="Texture2D" uid="uid://dxalcto01emv5" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Hurt_000.png" id="13_wx8h6"]
-[ext_resource type="Texture2D" uid="uid://caue0f20vj2il" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Hurt_001.png" id="14_uv12y"]
-[ext_resource type="Texture2D" uid="uid://dxoo3r0y7ixxq" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Hurt_002.png" id="15_bffhv"]
-[ext_resource type="Texture2D" uid="uid://84ecv5cgk3h" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_000.png" id="16_jm6dc"]
-[ext_resource type="Texture2D" uid="uid://fe7ju2tme107" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_001.png" id="17_2c4n4"]
-[ext_resource type="Texture2D" uid="uid://cq26baqbboek6" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_002.png" id="18_3l4md"]
-[ext_resource type="Texture2D" uid="uid://c51yfrqburcfv" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_003.png" id="19_fxx77"]
-[ext_resource type="Texture2D" uid="uid://bwdu22pbg48kj" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_004.png" id="20_dntkt"]
-[ext_resource type="Texture2D" uid="uid://dn778i4b455pn" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_005.png" id="21_02loc"]
-[ext_resource type="Texture2D" uid="uid://ci0ols43c5sf3" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_000.png" id="22_sllnt"]
-[ext_resource type="Texture2D" uid="uid://cxqnsxatr4jbs" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_001.png" id="23_uxrml"]
-[ext_resource type="Texture2D" uid="uid://dq82p0m8587pq" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_002.png" id="24_lbndy"]
-[ext_resource type="Texture2D" uid="uid://bvx14gcecbar0" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_003.png" id="25_pdaxu"]
-[ext_resource type="Texture2D" uid="uid://dl6iy4r5m0kq5" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_004.png" id="26_2vnwn"]
-[ext_resource type="Texture2D" uid="uid://bq20v4fc2rglp" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_005.png" id="27_aoq00"]
-[ext_resource type="Texture2D" uid="uid://c1f4kfapwvabs" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_006.png" id="28_y62xt"]
-[ext_resource type="Texture2D" uid="uid://7g8f3dwqew08" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_007.png" id="29_yqhhe"]
-[ext_resource type="Texture2D" uid="uid://ctat3l6f0clsb" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_008.png" id="30_2b6we"]
-[ext_resource type="Texture2D" uid="uid://cb4lv1bxe6kpy" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_009.png" id="31_rsixa"]
-[ext_resource type="Texture2D" uid="uid://jsp8xksoukjo" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_010.png" id="32_pnmog"]
-[ext_resource type="Texture2D" uid="uid://bl8eom5qooyun" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_011.png" id="33_nk6lu"]
+[ext_resource type="Texture2D" uid="uid://c0jkblal7ygsr" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_000.png" id="1_ijxv3"]
+[ext_resource type="Script" uid="uid://c6yryscrncmq6" path="res://scenes/characters/enemies/enemy_baryonyx_body.gd" id="1_k8hqt"]
+[ext_resource type="Texture2D" uid="uid://da5fmc7w68653" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_001.png" id="2_v0she"]
+[ext_resource type="Texture2D" uid="uid://bnw752n2e43is" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_002.png" id="3_ylcfs"]
+[ext_resource type="Texture2D" uid="uid://nkvodlmss8qg" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_003.png" id="4_docig"]
+[ext_resource type="Texture2D" uid="uid://b074ijagsh4v3" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_004.png" id="5_mbah2"]
+[ext_resource type="Texture2D" uid="uid://4tayv6pte0hy" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_005.png" id="6_lqwyb"]
+[ext_resource type="Texture2D" uid="uid://bavy5v7eoukxk" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_006.png" id="7_spn5v"]
+[ext_resource type="Texture2D" uid="uid://curtswegrx37d" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_000.png" id="8_dulcv"]
+[ext_resource type="Texture2D" uid="uid://bqt1nixbhl3oi" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_001.png" id="9_3pt14"]
+[ext_resource type="Texture2D" uid="uid://de2a6b0tapo04" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_002.png" id="10_btrfo"]
+[ext_resource type="Texture2D" uid="uid://417upc7cpfyg" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_003.png" id="11_odpgl"]
+[ext_resource type="Texture2D" uid="uid://b3rst0sb7348a" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Dead_004.png" id="12_iiu0e"]
+[ext_resource type="Texture2D" uid="uid://dxalcto01emv5" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Hurt_000.png" id="13_447ns"]
+[ext_resource type="Texture2D" uid="uid://caue0f20vj2il" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Hurt_001.png" id="14_ohsov"]
+[ext_resource type="Texture2D" uid="uid://dxoo3r0y7ixxq" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Hurt_002.png" id="15_pnkgp"]
+[ext_resource type="Texture2D" uid="uid://84ecv5cgk3h" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_000.png" id="16_w7tev"]
+[ext_resource type="Texture2D" uid="uid://fe7ju2tme107" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_001.png" id="17_0q4c3"]
+[ext_resource type="Texture2D" uid="uid://cq26baqbboek6" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_002.png" id="18_vnuba"]
+[ext_resource type="Texture2D" uid="uid://c51yfrqburcfv" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_003.png" id="19_mqvj8"]
+[ext_resource type="Texture2D" uid="uid://bwdu22pbg48kj" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_004.png" id="20_sel0l"]
+[ext_resource type="Texture2D" uid="uid://dn778i4b455pn" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Idle_005.png" id="21_x13i8"]
+[ext_resource type="Texture2D" uid="uid://ci0ols43c5sf3" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_000.png" id="22_smloy"]
+[ext_resource type="Texture2D" uid="uid://cxqnsxatr4jbs" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_001.png" id="23_xs7aq"]
+[ext_resource type="Texture2D" uid="uid://dq82p0m8587pq" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_002.png" id="24_2cowr"]
+[ext_resource type="Texture2D" uid="uid://bvx14gcecbar0" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_003.png" id="25_yj44p"]
+[ext_resource type="Texture2D" uid="uid://dl6iy4r5m0kq5" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_004.png" id="26_n4o0s"]
+[ext_resource type="Texture2D" uid="uid://bq20v4fc2rglp" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_005.png" id="27_gxtoo"]
+[ext_resource type="Texture2D" uid="uid://c1f4kfapwvabs" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_006.png" id="28_kat75"]
+[ext_resource type="Texture2D" uid="uid://7g8f3dwqew08" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_007.png" id="29_1veww"]
+[ext_resource type="Texture2D" uid="uid://ctat3l6f0clsb" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_008.png" id="30_8ap82"]
+[ext_resource type="Texture2D" uid="uid://cb4lv1bxe6kpy" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_009.png" id="31_5p000"]
+[ext_resource type="Texture2D" uid="uid://jsp8xksoukjo" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_010.png" id="32_egp77"]
+[ext_resource type="Texture2D" uid="uid://bl8eom5qooyun" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Walk_011.png" id="33_h726o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ky3"]
 size = Vector2(111, 44)
@@ -154,22 +155,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("1_w0ky3"), ExtResource("2_ksqmq"), ExtResource("3_ksqmq"), ExtResource("3_8e52f"), ExtResource("4_mxrkf"), ExtResource("5_jmxl0"), ExtResource("6_60ha2")]
-}
-
-[sub_resource type="Animation" id="Animation_j8qac"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_w0ky3")]
+"values": [ExtResource("1_ijxv3"), ExtResource("2_v0she"), ExtResource("3_ylcfs"), ExtResource("4_docig"), ExtResource("5_mbah2"), ExtResource("6_lqwyb"), ExtResource("7_spn5v")]
 }
 
 [sub_resource type="Animation" id="Animation_ksqmq"]
@@ -186,7 +172,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_5hkcg"), ExtResource("9_xdoo8"), ExtResource("10_ltw38"), ExtResource("11_wx8h6"), ExtResource("12_uv12y")]
+"values": [ExtResource("8_dulcv"), ExtResource("9_3pt14"), ExtResource("10_btrfo"), ExtResource("11_odpgl"), ExtResource("12_iiu0e")]
 }
 
 [sub_resource type="Animation" id="Animation_5hkcg"]
@@ -203,11 +189,13 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("13_wx8h6"), ExtResource("14_uv12y"), ExtResource("15_bffhv")]
+"values": [ExtResource("13_447ns"), ExtResource("14_ohsov"), ExtResource("15_pnkgp")]
 }
 
 [sub_resource type="Animation" id="Animation_wx8h6"]
 resource_name = "Idle"
+length = 0.3
+loop_mode = 1
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -219,7 +207,22 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("16_jm6dc"), ExtResource("17_2c4n4"), ExtResource("18_3l4md"), ExtResource("19_fxx77"), ExtResource("20_dntkt"), ExtResource("21_02loc"), ExtResource("16_jm6dc")]
+"values": [ExtResource("16_w7tev"), ExtResource("17_0q4c3"), ExtResource("18_vnuba"), ExtResource("19_mqvj8"), ExtResource("20_sel0l"), ExtResource("21_x13i8"), ExtResource("16_w7tev")]
+}
+
+[sub_resource type="Animation" id="Animation_j8qac"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ijxv3")]
 }
 
 [sub_resource type="Animation" id="Animation_oabcn"]
@@ -237,7 +240,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("22_sllnt"), ExtResource("23_uxrml"), ExtResource("24_lbndy"), ExtResource("25_pdaxu"), ExtResource("26_2vnwn"), ExtResource("27_aoq00"), ExtResource("28_y62xt"), ExtResource("29_yqhhe"), ExtResource("30_2b6we"), ExtResource("31_rsixa"), ExtResource("32_pnmog"), ExtResource("33_nk6lu"), ExtResource("22_sllnt")]
+"values": [ExtResource("22_smloy"), ExtResource("23_xs7aq"), ExtResource("24_2cowr"), ExtResource("25_yj44p"), ExtResource("26_n4o0s"), ExtResource("27_gxtoo"), ExtResource("28_kat75"), ExtResource("29_1veww"), ExtResource("30_8ap82"), ExtResource("31_5p000"), ExtResource("32_egp77"), ExtResource("33_h726o"), ExtResource("22_smloy")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_blu3w"]
@@ -250,12 +253,13 @@ _data = {
 &"Walk": SubResource("Animation_oabcn")
 }
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="EnemyBaryonyx" type="CharacterBody2D"]
 collision_layer = 4
+script = ExtResource("1_k8hqt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("1_w0ky3")
+texture = ExtResource("1_ijxv3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 1)

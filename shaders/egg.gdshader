@@ -1,8 +1,11 @@
 shader_type canvas_item;
-uniform vec4 glow_color = vec4(3.0, 3.0, 2.9, 1.0); 
-uniform float glow_size = 3;
+uniform vec4 glow_color = vec4(1.0, 1.0, 1.0, 1.0); 
+uniform float min_glow_size = 1;
+uniform float max_glow_size = 5;
+uniform float glow_speed = 2.0;
 
 void fragment() {
+	    float glow_size = mix(min_glow_size, max_glow_size, (sin(TIME * glow_speed) * 0.5) + 0.5);
     vec4 tex = texture(TEXTURE, UV);
 
     vec4 glow = vec4(0.0);
