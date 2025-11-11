@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b5krxnpqrfk8q"]
+[gd_scene load_steps=14 format=3 uid="uid://b5krxnpqrfk8q"]
 
 [ext_resource type="PackedScene" uid="uid://bus5yebjhfpkn" path="res://scenes/characters/player/player.tscn" id="1_377w7"]
+[ext_resource type="Script" uid="uid://bsn62l2eu3ak6" path="res://scripts/managers/manager_level.gd" id="1_rmjfq"]
 [ext_resource type="Texture2D" uid="uid://bsftg1fo4g2rr" path="res://assets/Jungle Asset Pack/jungle tileset/jungle tileset.png" id="2_bovvr"]
 [ext_resource type="PackedScene" uid="uid://c5x4ioycl6rd4" path="res://scenes/interactable/egg.tscn" id="3_b2cq8"]
 [ext_resource type="Texture2D" uid="uid://bcmrxjkyard6p" path="res://assets/Nature Landscapes Free Pixel Art/nature_2/1.png" id="4_mbbpy"]
@@ -375,6 +376,7 @@ physics_layer_0/physics_material = SubResource("PhysicsMaterial_bovvr")
 sources/0 = SubResource("TileSetAtlasSource_b2cq8")
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_rmjfq")
 
 [node name="Player" parent="." instance=ExtResource("1_377w7")]
 position = Vector2(750, -70)
@@ -398,15 +400,19 @@ repeat_size = Vector2(575, 0)
 follow_viewport = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
 texture = ExtResource("4_mbbpy")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
 texture = ExtResource("5_ouxo3")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
 texture = ExtResource("6_icy5c")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
 texture = ExtResource("7_rmjfq")
 
 [node name="EnemyBaryonyx" parent="." instance=ExtResource("9_rmjfq")]

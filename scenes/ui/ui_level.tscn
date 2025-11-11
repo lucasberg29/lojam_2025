@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy4xcsokeydww"]
+
+[ext_resource type="Texture2D" uid="uid://jdggbyootfi7" path="res://assets/Jungle-GUI-PNG/PNG/btn/music_off.png" id="2_cn2m4"]
+[ext_resource type="Texture2D" uid="uid://dieun65vg32xv" path="res://assets/Jungle-GUI-PNG/PNG/pause/header.png" id="3_f1mk2"]
+[ext_resource type="Texture2D" uid="uid://cf21uqda1xj3v" path="res://assets/Jungle-GUI-PNG/PNG/pause/table.png" id="4_cn2m4"]
+
+[sub_resource type="Theme" id="Theme_iw7x0"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+VBoxContainer/constants/separation = 4
+
+[node name="UiLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicOff" type="Sprite2D" parent="."]
+position = Vector2(455, 565)
+scale = Vector2(0.4813084, 0.47209302)
+texture = ExtResource("2_cn2m4")
+
+[node name="Header" type="Sprite2D" parent="."]
+position = Vector2(11, 80.000015)
+scale = Vector2(0.39531407, 0.3409091)
+texture = ExtResource("3_f1mk2")
+
+[node name="Panel" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cn2m4")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.0
+offset_top = -2.0
+offset_right = 68.0
+offset_bottom = 48.0
+grow_horizontal = 2
+texture = ExtResource("3_f1mk2")
+expand_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.5
+offset_right = 43.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_iw7x0")
+text = "Resume
+"
+flat = true
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+
+[node name="Settings" type="Button" parent="Panel/VBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_iw7x0")
+text = "Settings"
+flat = true
+autowrap_mode = 3
+autowrap_trim_flags = 192
+clip_text = true
+
+[node name="QuitButton" type="Button" parent="Panel/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_iw7x0")
+text = "Quit
+"
+flat = true

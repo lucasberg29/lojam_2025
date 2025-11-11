@@ -30,7 +30,7 @@ func _ready():
 	else:
 		sprite.texture = sprite_textures[selected_sprite]
 
-func _process(delta: float):
+func _process(_delta: float):
 	if is_moving_toward_player:
 		move_toward_player()
 
@@ -41,8 +41,6 @@ func _on_body_entered(body: Node2D):
 
 func move_toward_player():
 	var target_pos = player_node.global_position
-	var direction = (target_pos - global_position).normalized()
-	
 	var speed = 100.0
 	var tween = create_tween()
 	tween.tween_property(self, "global_position", target_pos, global_position.distance_to(target_pos) / speed)

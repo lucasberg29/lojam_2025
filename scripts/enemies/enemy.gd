@@ -17,7 +17,7 @@ func _init(_health: int):
 	id_counter += 1 
 	health = _health
 
-func update(delta: float):
+func update(_delta: float):
 	print("Enemy base class updating! YOU SHOULD NOT SEE THIS!")
 
 func hit_enemy(_damage: int):
@@ -28,5 +28,5 @@ func hit_enemy(_damage: int):
 func kill_enemy():
 	print("Enemy.hit_enemy() not implemented")
 
-func move(direction: Vector2):
+func move(_direction: Vector2):
 	print("Enemy base class updating! YOU SHOULD NOT SEE THIS!")

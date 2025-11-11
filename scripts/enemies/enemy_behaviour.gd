@@ -56,8 +56,8 @@ func WanderLeft(delta:float) -> void:
 	velocity = enemy_body.velocity
 	enemy_body.move_and_slide()
 
-func WanderRight(delta:float) -> void:
+func WanderRight(_delta:float) -> void:
 	pass
 
-func Attack(delta:float) -> void:
+func Attack(_delta:float) -> void:
 	pass

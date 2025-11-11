@@ -1,7 +1,7 @@
 [gd_scene load_steps=68 format=3 uid="uid://cmnntpmpninp4"]
 
 [ext_resource type="Texture2D" uid="uid://c0jkblal7ygsr" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_000.png" id="1_ijxv3"]
-[ext_resource type="Script" uid="uid://c6yryscrncmq6" path="res://scenes/characters/enemies/enemy_baryonyx_body.gd" id="1_k8hqt"]
+[ext_resource type="Script" uid="uid://c6yryscrncmq6" path="res://scripts/enemies/enemy_baryonyx_body.gd" id="1_k8hqt"]
 [ext_resource type="Texture2D" uid="uid://da5fmc7w68653" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_001.png" id="2_v0she"]
 [ext_resource type="Texture2D" uid="uid://bnw752n2e43is" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_002.png" id="3_ylcfs"]
 [ext_resource type="Texture2D" uid="uid://nkvodlmss8qg" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_003.png" id="4_docig"]
