@@ -1,4 +1,27 @@
-[gd_scene format=3 uid="uid://ctmrxqi16m7q0"]
+[gd_scene load_steps=17 format=3 uid="uid://ctmrxqi16m7q0"]
+
+[ext_resource type="Script" uid="uid://dq8t2ecpk0cn3" path="res://scripts/ui/ui_menu_buttons.gd" id="1_iidt0"]
+[ext_resource type="Texture2D" uid="uid://ch4ge2sr8br2t" path="res://assets/Jungle-GUI-PNG/PNG/upgrade/bg.png" id="2_6aw08"]
+[ext_resource type="Texture2D" uid="uid://dlo202qnfcto1" path="res://assets/Jungle-GUI-PNG/PNG/shop/bg.png" id="3_uaiye"]
+[ext_resource type="Script" uid="uid://ekk5of5gkpb0" path="res://scripts/ui/timer.gd" id="4_n1cxb"]
+[ext_resource type="Script" uid="uid://c5s45p47q0hrj" path="res://scripts/ui/music_panel.gd" id="5_rh3js"]
+[ext_resource type="Script" uid="uid://bhq6ktw3yqqw7" path="res://scripts/ui/song_update.gd" id="6_1a8lm"]
+[ext_resource type="Texture2D" uid="uid://8s87p4clijw" path="res://assets/kenney_game-icons/PNG/White/1x/previous.png" id="7_6prfo"]
+[ext_resource type="Texture2D" uid="uid://jpoalelu32p3" path="res://assets/kenney_game-icons/PNG/White/1x/next.png" id="8_ao1qc"]
+[ext_resource type="Texture2D" uid="uid://dlc1b5mriqgrr" path="res://assets/kenney_game-icons/PNG/White/1x/forward.png" id="9_phw71"]
+[ext_resource type="Texture2D" uid="uid://cmkq0pbqe5thx" path="res://assets/kenney_game-icons/PNG/White/1x/pause.png" id="10_p4cbm"]
+[ext_resource type="Texture2D" uid="uid://ch70reu24dxfy" path="res://assets/kenney_game-icons/PNG/White/1x/fastForward.png" id="11_u8cix"]
+[ext_resource type="Texture2D" uid="uid://b8pjv3lcsi223" path="res://assets/kenney_game-icons/PNG/White/1x/rewind.png" id="12_m8n12"]
+[ext_resource type="Texture2D" uid="uid://lwncir3o1iqg" path="res://assets/Free-Horizontal-Game-Backgrounds/PNG/game_background_2/game_background_2.png" id="13_6aw08"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yake"]
+texture = ExtResource("2_6aw08")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xsf2i"]
+texture = ExtResource("3_uaiye")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p76uh"]
+texture = ExtResource("3_uaiye")
 
 [node name="UiMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +30,157 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_6aw08")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.805
+offset_top = -89.5
+offset_right = 236.805
+offset_bottom = 89.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("1_iidt0")
+
+[node name="Start_Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_1yake")
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_xsf2i")
+text = "Settings"
+
+[node name="Quit_Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxTexture_p76uh")
+text = "Quit"
+
+[node name="Play_Stop Music" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = 157.0
+offset_right = 73.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Music"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Timer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 32.0
+offset_right = 88.0
+offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+text = "Timer: "
+script = ExtResource("4_n1cxb")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 60.0
+offset_right = 732.0
+offset_bottom = 146.0
+script = ExtResource("5_rh3js")
+
+[node name="SongUpdate" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 329.0
+offset_bottom = 37.0
+text = "playing: "
+script = ExtResource("6_1a8lm")
+
+[node name="Previous" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 44.0
+offset_right = 125.0
+offset_bottom = 82.0
+icon = ExtResource("7_6prfo")
+expand_icon = true
+
+[node name="Next" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 44.0
+offset_right = 251.0
+offset_bottom = 82.0
+icon = ExtResource("8_ao1qc")
+expand_icon = true
+
+[node name="PlayResume" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 44.0
+offset_right = 209.0
+offset_bottom = 82.0
+icon = ExtResource("9_phw71")
+expand_icon = true
+
+[node name="Pause" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 44.0
+offset_right = 167.0
+offset_bottom = 82.0
+icon = ExtResource("10_p4cbm")
+expand_icon = true
+
+[node name="FastForward" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 44.0
+offset_right = 292.0
+offset_bottom = 82.0
+icon = ExtResource("11_u8cix")
+expand_icon = true
+
+[node name="FastBackward" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 44.0
+offset_right = 84.0
+offset_bottom = 82.0
+icon = ExtResource("12_m8n12")
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start_Game" to="MarginContainer/VBoxContainer" method="_on_start_game_pressed"]
+[connection signal="pressed" from="Panel/Next" to="Panel" method="_on_next_pressed"]
+[connection signal="pressed" from="Panel/PlayResume" to="Panel" method="_on_play_resume_pressed"]
+[connection signal="pressed" from="Panel/Pause" to="Panel" method="_on_pause_pressed"]

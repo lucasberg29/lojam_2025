@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dy4xcsokeydww"]
 
-[ext_resource type="Texture2D" uid="uid://jdggbyootfi7" path="res://assets/Jungle-GUI-PNG/PNG/btn/music_off.png" id="2_cn2m4"]
 [ext_resource type="Texture2D" uid="uid://dieun65vg32xv" path="res://assets/Jungle-GUI-PNG/PNG/pause/header.png" id="3_f1mk2"]
 [ext_resource type="Texture2D" uid="uid://cf21uqda1xj3v" path="res://assets/Jungle-GUI-PNG/PNG/pause/table.png" id="4_cn2m4"]
+[ext_resource type="Script" uid="uid://dw71ox1mm23pa" path="res://scripts/ui/ui_pause_buttons.gd" id="4_f1mk2"]
 
 [sub_resource type="Theme" id="Theme_iw7x0"]
 Button/colors/font_color = Color(0, 0, 0, 1)
@@ -15,16 +15,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="MusicOff" type="Sprite2D" parent="."]
-position = Vector2(455, 565)
-scale = Vector2(0.4813084, 0.47209302)
-texture = ExtResource("2_cn2m4")
-
-[node name="Header" type="Sprite2D" parent="."]
-position = Vector2(11, 80.000015)
-scale = Vector2(0.39531407, 0.3409091)
-texture = ExtResource("3_f1mk2")
 
 [node name="Panel" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 200)
@@ -79,8 +69,9 @@ offset_bottom = 43.5
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+script = ExtResource("4_f1mk2")
 
-[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer2"]
+[node name="Resume" type="Button" parent="Panel/VBoxContainer2"]
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 4
@@ -103,10 +94,29 @@ autowrap_mode = 3
 autowrap_trim_flags = 192
 clip_text = true
 
-[node name="QuitButton" type="Button" parent="Panel/VBoxContainer2"]
+[node name="Quit" type="Button" parent="Panel/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_iw7x0")
 text = "Quit
 "
 flat = true
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_f1mk2")
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Button Teste"
+
+[connection signal="pressed" from="Panel/VBoxContainer2/Resume" to="Panel/VBoxContainer2" method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer2/Settings" to="Panel/VBoxContainer2" method="_on_settings_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer2/Quit" to="Panel/VBoxContainer2" method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer2/Button" to="Panel/VBoxContainer2" method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Button" to="Panel/VBoxContainer" method="_on_button_pressed"]

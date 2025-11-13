@@ -13,6 +13,7 @@ var is_playing: bool = false
 func _ready():
 	add_child(music_player)
 	self.owner = null
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _process(_delta):
 	if is_playing:
