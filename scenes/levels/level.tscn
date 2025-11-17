@@ -415,8 +415,10 @@ texture = ExtResource("6_icy5c")
 texture_filter = 1
 texture = ExtResource("7_rmjfq")
 
-[node name="EnemyBaryonyx" parent="." instance=ExtResource("9_rmjfq")]
-position = Vector2(1106, 9)
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="EnemyBaryonyx" parent="Enemies" instance=ExtResource("9_rmjfq")]
+position = Vector2(964, 13)
 
 [node name="EnemyManager" parent="." instance=ExtResource("9_icy5c")]
-enemies_paths = Array[NodePath]([NodePath("../EnemyBaryonyx")])
+enemies_paths = Array[NodePath]([NodePath("../Enemies/EnemyBaryonyx")])

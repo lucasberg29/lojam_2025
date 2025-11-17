@@ -9,6 +9,8 @@ var velocity: Vector2 = Vector2.ZERO
 var on_floor: bool = true
 var sprite:Sprite2D
 
+var is_walking: bool = false
+
 func _init(_animation_tree: AnimationTree , _sprite: Sprite2D):
 	animation_tree = _animation_tree
 	sprite = _sprite
@@ -19,7 +21,9 @@ func update_animation(enemy_behaviour: EnemyBehaviour):
 		update_direction(enemy_behaviour.current_direction)
 
 	#clear_conditions()
-	animation_tree.set("parameters/conditions/walk", true)
+	if not is_walking:
+		animation_tree.set("parameters/conditions/walk", true)
+		is_walking = true
 
 	#if not enemy_behaviour.on_floor:
 		#if enemy_behaviour.velocity.y < 0:
