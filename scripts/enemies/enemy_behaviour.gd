@@ -9,8 +9,8 @@ var right_ray_cast:RayCast2D
 
 var velocity: Vector2 = Vector2.ZERO
 
-const ENEMY_SPEED := 200.0
-const ACCELERATION := 800.0
+const ENEMY_SPEED := 100.0
+const ACCELERATION := 600.0
 
 var current_direction = 0
 

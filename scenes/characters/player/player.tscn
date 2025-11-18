@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://bus5yebjhfpkn"]
+[gd_scene load_steps=87 format=3 uid="uid://bus5yebjhfpkn"]
 
 [ext_resource type="Script" uid="uid://ch5g8y3mrykka" path="res://scripts/player/player.gd" id="1_ieypo"]
 [ext_resource type="Texture2D" uid="uid://dmelrqdcgly7n" path="res://assets/FreeDinoSprite/png/Idle (1).png" id="9_fvt27"]
@@ -335,9 +335,12 @@ states/Walk/position = Vector2(544, 75)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_3hnlq"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_d73qs"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_tebod"), "Walk", "Jump_Up", SubResource("AnimationNodeStateMachineTransition_es5sa"), "Idle", "Jump_Down", SubResource("AnimationNodeStateMachineTransition_kxlma"), "Idle", "Jump_Up", SubResource("AnimationNodeStateMachineTransition_ieypo"), "Jump_Up", "Jump_Down", SubResource("AnimationNodeStateMachineTransition_sulyr"), "Walk", "Jump_Down", SubResource("AnimationNodeStateMachineTransition_71adu"), "Jump_Down", "Walk", SubResource("AnimationNodeStateMachineTransition_xm30n"), "Jump_Down", "Jump_Up", SubResource("AnimationNodeStateMachineTransition_qe74o"), "Jump_Down", "Idle", SubResource("AnimationNodeStateMachineTransition_s4se6"), "Jump_Up", "Idle", SubResource("AnimationNodeStateMachineTransition_4c5ab"), "Jump_Up", "Walk", SubResource("AnimationNodeStateMachineTransition_omk8d"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_kghjy"), "Run", "Walk", SubResource("AnimationNodeStateMachineTransition_72eiu"), "Run", "Jump_Up", SubResource("AnimationNodeStateMachineTransition_rr0sw"), "Run", "Jump_Down", SubResource("AnimationNodeStateMachineTransition_ejaeo"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_kbkvr"), "Jump_Down", "Run", SubResource("AnimationNodeStateMachineTransition_ofe5m"), "Jump_Up", "Run", SubResource("AnimationNodeStateMachineTransition_qiw4v"), "Walk", "Run", SubResource("AnimationNodeStateMachineTransition_35rnk"), "Dead", "End", SubResource("AnimationNodeStateMachineTransition_8clsk"), "Jump_Up", "Dead", SubResource("AnimationNodeStateMachineTransition_ba42v"), "Walk", "Dead", SubResource("AnimationNodeStateMachineTransition_em43t"), "Run", "Dead", SubResource("AnimationNodeStateMachineTransition_fvt27"), "Idle", "Dead", SubResource("AnimationNodeStateMachineTransition_d4s5w"), "Jump_Down", "Dead", SubResource("AnimationNodeStateMachineTransition_tsb6l")]
 graph_offset = Vector2(255, 138)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe74o"]
+size = Vector2(5.844158, 19.999985)
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
-collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_ieypo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -369,3 +372,14 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_top_margin = 0.5
+
+[node name="StompArea" type="Area2D" parent="."]
+position = Vector2(4.9999995, 224.99998)
+scale = Vector2(30.8, 1)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompArea"]
+position = Vector2(0.4870128, -29.999985)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_qe74o")

@@ -10,3 +10,11 @@ extends CharacterBody2D
 func _ready():
 	var body = self
 	enemy_data = EnemyBaryonyx.new(2,1, body, animation_tree, sprite_2d, left_ray_cast, right_ray_cast)
+
+func finish_hurting():
+	animation_tree.set("parameters/conditions/hurt", false)
+
+func _process(delta: float):
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		print("Hit something:", collision.get_collider())
