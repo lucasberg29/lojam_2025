@@ -16,13 +16,15 @@ func _init(_animation_tree: AnimationTree , _sprite: Sprite2D):
 	sprite = _sprite
 	clear_conditions()
 
+func start_animation(animation: String):
+	var folder_dir = "parameters/conditions/"
+	var folder_and_animation = folder_dir + animation
+	clear_conditions()
+	animation_tree.set(folder_and_animation, true)
+
 func update_animation(enemy_behaviour: EnemyBehaviour):
 	if enemy_behaviour.current_direction != 0:
 		update_direction(enemy_behaviour.current_direction)
-
-	if not is_walking:
-		animation_tree.set("parameters/conditions/walk", true)
-		is_walking = true
 
 func clear_conditions():
 		animation_tree.set("parameters/conditions/idle", false)

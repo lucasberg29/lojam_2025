@@ -1,0 +1,177 @@
+[gd_scene load_steps=27 format=3 uid="uid://bqfdlk0rd445f"]
+
+[ext_resource type="Script" uid="uid://c6yryscrncmq6" path="res://scripts/enemies/enemy_body.gd" id="1_hi5hv"]
+[ext_resource type="Texture2D" uid="uid://c0jkblal7ygsr" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_000.png" id="2_qgxqa"]
+[ext_resource type="Texture2D" uid="uid://qxbg5g0thqhp" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Dead_000.png" id="3_utkb8"]
+[ext_resource type="Texture2D" uid="uid://vlvklwmvqoxu" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Dead_001.png" id="4_3t42f"]
+[ext_resource type="Texture2D" uid="uid://dm4h4mgnps2qq" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Hurt_000.png" id="5_utkb8"]
+[ext_resource type="Texture2D" uid="uid://c6hpwyb3fa351" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Hurt_001.png" id="6_3t42f"]
+[ext_resource type="Texture2D" uid="uid://bewsnk8m48sk3" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Hurt_002.png" id="7_rmfs4"]
+[ext_resource type="Texture2D" uid="uid://ll4nldn1nc2e" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Fly_000.png" id="8_ysj6n"]
+[ext_resource type="Texture2D" uid="uid://b78lnxoy5im6o" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Fly_001.png" id="9_y07xk"]
+[ext_resource type="Texture2D" uid="uid://58gq1ec842fc" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Fly_002.png" id="10_hg22n"]
+[ext_resource type="Texture2D" uid="uid://togk5vct5ykd" path="res://assets/prehistoric dino game sprites ZIP/Png/Alanqa/Fly_003.png" id="11_y07xk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0ky3"]
+size = Vector2(111, 44)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dhsud"]
+animation = &"Dead"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y07xk"]
+animation = &"Fly"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_635mb"]
+animation = &"Hurt"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8ahdh"]
+advance_mode = 2
+advance_condition = &"dead"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hg22n"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y07xk"]
+advance_mode = 2
+advance_condition = &"hurt"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0g0w7"]
+advance_mode = 2
+advance_condition = &"fly"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_sllnt"]
+states/Dead/node = SubResource("AnimationNodeAnimation_dhsud")
+states/Dead/position = Vector2(714, 170.95883)
+states/End/position = Vector2(808, 316.6502)
+states/Fly/node = SubResource("AnimationNodeAnimation_y07xk")
+states/Fly/position = Vector2(565, 297.95883)
+states/Hurt/node = SubResource("AnimationNodeAnimation_635mb")
+states/Hurt/position = Vector2(565, 172.95883)
+states/Start/position = Vector2(388, 316.6502)
+transitions = ["Hurt", "Dead", SubResource("AnimationNodeStateMachineTransition_8ahdh"), "Start", "Fly", SubResource("AnimationNodeStateMachineTransition_hg22n"), "Fly", "Hurt", SubResource("AnimationNodeStateMachineTransition_y07xk"), "Hurt", "Fly", SubResource("AnimationNodeStateMachineTransition_0g0w7")]
+graph_offset = Vector2(77, 137.95883)
+
+[sub_resource type="Animation" id="Animation_ksqmq"]
+resource_name = "Dead"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_utkb8"), ExtResource("4_3t42f")]
+}
+
+[sub_resource type="Animation" id="Animation_5hkcg"]
+resource_name = "Hurt"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_utkb8"), ExtResource("6_3t42f"), ExtResource("7_rmfs4")]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"finish_hurting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_j8qac"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qgxqa")]
+}
+
+[sub_resource type="Animation" id="Animation_utkb8"]
+resource_name = "Fly"
+length = 0.225
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_ysj6n"), ExtResource("9_y07xk"), ExtResource("10_hg22n"), ExtResource("11_y07xk")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_blu3w"]
+_data = {
+&"Dead": SubResource("Animation_ksqmq"),
+&"Fly": SubResource("Animation_utkb8"),
+&"Hurt": SubResource("Animation_5hkcg"),
+&"RESET": SubResource("Animation_j8qac")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_k8hqt"]
+
+[node name="EnemyAlanga" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_hi5hv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_qgxqa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_w0ky3")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_sllnt")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/dead = false
+parameters/conditions/fly = false
+parameters/conditions/hurt = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_blu3w")
+}
+
+[node name="LeftRayCast" type="RayCast2D" parent="."]
+target_position = Vector2(-60, 0)
+
+[node name="RightRayCast" type="RayCast2D" parent="."]
+target_position = Vector2(60, 0)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_k8hqt")

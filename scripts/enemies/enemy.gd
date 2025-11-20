@@ -11,6 +11,8 @@ var damage: int
 
 var behaviour: EnemyBehaviour
 var body: CharacterBody2D
+var animation: EnemyAnimation
+var sprite: Sprite2D
 
 func _init(_health: int):
 	id = id_counter
@@ -18,7 +20,7 @@ func _init(_health: int):
 	health = _health
 
 func update(_delta: float):
-	print("Enemy base class updating! YOU SHOULD NOT SEE THIS!")
+	pass
 
 func hit_enemy(_damage: int):
 	health -= _damage

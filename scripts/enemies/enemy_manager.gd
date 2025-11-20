@@ -6,8 +6,8 @@ var enemies: Array[Enemy] = []
 func _ready():
 	for path in enemies_paths:
 		var node = get_node(path) as CharacterBody2D
-		if node and node.enemy_data:
-			enemies.append(node.enemy_data)
+		if node and node.enemy:
+			enemies.append(node.enemy)
 
 func _process(delta: float) -> void:
 	for enemy in enemies:
