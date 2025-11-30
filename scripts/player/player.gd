@@ -10,11 +10,15 @@ var gravity_modifier = 1.0
 
 const JUMP_INCREMENT = 5.0
 
+var player_damage:int = 1
+
 var current_velocity:Vector2
 var on_floor = false
 var is_shift_down = false
 var is_jump_down = false
 var direction: float
+
+var hasHitEnemy = false
 
 var animation_controller : PlayerAnimation
 var movement_controller: PlayerMovement
@@ -27,7 +31,13 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	update_controls()
-	current_velocity = movement_controller.update_movement(delta, on_floor)
+	
+	if hasHitEnemy:
+		current_velocity = movement_controller.update_movement(delta, on_floor, true)
+		hasHitEnemy = false
+	else:
+		current_velocity = movement_controller.update_movement(delta, on_floor, false)
+		
 	animation_controller.update_animation(movement_controller)
 
 func update_controls():
@@ -40,3 +50,14 @@ func pick_up_egg():
 
 func kill_player():
 	print("Game Over")
+
+
+func _on_stomp_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Enemies"):
+		hasHitEnemy = true
+		if body.has_method("hit_enemy"):
+			body.hit_enemy(player_damage)
+		
+	
+	
+	

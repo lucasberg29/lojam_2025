@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 MusicManager="*res://scripts/managers/manager_music.gd"
 ManagerUi="*res://scenes/autoloads/manager_ui.tscn"
 
+[global_group]
+
+Enemies=""
+
 [input]
 
 move_left={

@@ -422,7 +422,7 @@ texture = ExtResource("7_rmjfq")
 [node name="EnemyBaryonyx" parent="Enemies" instance=ExtResource("9_rmjfq")]
 position = Vector2(1145, 6)
 
-[node name="EnemyAlanga" parent="Enemies" instance=ExtResource("10_7pb6i")]
+[node name="EnemyAlanga" parent="Enemies" groups=["Enemies"] instance=ExtResource("10_7pb6i")]
 position = Vector2(1119, -75)
 
 [node name="EnemyManager" parent="." instance=ExtResource("9_icy5c")]

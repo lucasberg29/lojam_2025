@@ -9,6 +9,8 @@ extends CharacterBody2D
 @onready var left_ray_cast: RayCast2D = $LeftRayCast
 @onready var right_ray_cast: RayCast2D = $RightRayCast
 
+var can_be_interacted_with = true
+
 func _ready():
 	var body = self
 	
@@ -19,9 +21,19 @@ func _ready():
 			enemy = EnemyAlanqa.new(2,1, body, animation_tree, sprite_2d, left_ray_cast, right_ray_cast)
 
 func finish_hurting():
-	animation_tree.set("parameters/conditions/hurt", false)
+	can_be_interacted_with = true
+	enemy.resume_behaviour()
+
+func finish_dying():
+	enemy.kill_enemy()
+	
 
 func _process(delta: float):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		print("Hit something:", collision.get_collider())
+
+func hit_enemy(_damage: int):
+	if can_be_interacted_with:
+		enemy.hit_enemy(_damage)
+		can_be_interacted_with = false

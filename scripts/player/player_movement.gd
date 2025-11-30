@@ -25,7 +25,7 @@ func _init(_character: CharacterBody2D):
 	character = _character
 	on_floor = true
 
-func update_movement(delta: float, _on_floor:bool) -> Vector2:
+func update_movement(delta: float, _on_floor:bool, _hasHitEnemy: bool) -> Vector2:
 	on_floor = _on_floor
 	if not on_floor:
 		character.velocity.y += gravity * delta / gravity_modifier
@@ -60,6 +60,9 @@ func update_movement(delta: float, _on_floor:bool) -> Vector2:
 		character.velocity.x = move_toward(character.velocity.x, target_speed, ACCELERATION * delta)
 	else:
 		character.velocity.x = move_toward(character.velocity.x, 0, FRICTION * delta)
+	
+	if _hasHitEnemy:
+		character.velocity.y = JUMP_VELOCITY
 
 	character.move_and_slide()
 	current_velocity = character.velocity
