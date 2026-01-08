@@ -1,4 +1,4 @@
-# enemy_baryonyx_body.gd
+# enemy_body.gd
 extends CharacterBody2D
 
 @export var enemy_type: Enums.EnemyType
@@ -8,6 +8,8 @@ extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var left_ray_cast: RayCast2D = $LeftRayCast
 @onready var right_ray_cast: RayCast2D = $RightRayCast
+@onready var collision_shape_2d_walk: CollisionShape2D = $CollisionShape2D_Walk
+@onready var collision_shape_2d_dead: CollisionShape2D = $CollisionShape2D_Dead
 
 var can_be_interacted_with = true
 
@@ -32,6 +34,7 @@ func _process(delta: float):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		print("Hit something:", collision.get_collider())
+		
 
 func hit_enemy(_damage: int):
 	if can_be_interacted_with:

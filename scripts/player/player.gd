@@ -51,13 +51,9 @@ func pick_up_egg():
 func kill_player():
 	print("Game Over")
 
-
 func _on_stomp_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemies"):
-		hasHitEnemy = true
 		if body.has_method("hit_enemy"):
-			body.hit_enemy(player_damage)
-		
-	
-	
-	
+			if body.enemy.is_alive:
+				hasHitEnemy = true
+				body.hit_enemy(player_damage)
