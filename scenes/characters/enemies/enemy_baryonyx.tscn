@@ -226,7 +226,7 @@ shape = SubResource("RectangleShape2D_dhsud")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("22_smloy")
+texture = ExtResource("33_h726o")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_sllnt")

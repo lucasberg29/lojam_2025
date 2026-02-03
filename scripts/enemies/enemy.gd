@@ -10,6 +10,7 @@ var health: int
 var damage: int
 var is_alive: bool
 var is_dying: bool
+var is_dead: bool
 
 var behaviour: EnemyBehaviour
 var body: CharacterBody2D

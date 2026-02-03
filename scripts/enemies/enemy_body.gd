@@ -8,8 +8,9 @@ extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var left_ray_cast: RayCast2D = $LeftRayCast
 @onready var right_ray_cast: RayCast2D = $RightRayCast
-@onready var collision_shape_2d_walk: CollisionShape2D = $CollisionShape2D_Walk
-@onready var collision_shape_2d_dead: CollisionShape2D = $CollisionShape2D_Dead
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+
+var collision_enabled = true
 
 var can_be_interacted_with = true
 
@@ -28,7 +29,8 @@ func finish_hurting():
 
 func finish_dying():
 	enemy.kill_enemy()
-	
+	enemy.is_dead = true
+	collision_shape_2d.disabled = true
 
 func _process(delta: float):
 	var collision = move_and_collide(velocity * delta)

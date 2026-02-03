@@ -22,6 +22,7 @@ func level():
 		menu_instance.queue_free()
 		menu_instance = null
 	get_tree().change_scene_to_file("res://scenes/levels/level.tscn")
+	get_tree().paused = false
 
 func pause_game():
 	if not is_scene_paused:
