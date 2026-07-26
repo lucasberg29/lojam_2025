@@ -23,8 +23,9 @@ func start_animation(animation: String):
 	animation_tree.set(folder_and_animation, true)
 
 func update_animation(enemy_behaviour: EnemyBehaviour):
-	if enemy_behaviour.current_direction != 0:
-		update_direction(enemy_behaviour.current_direction)
+	if is_instance_valid(Enemy):
+		if enemy_behaviour.current_direction != 0:
+			update_direction(enemy_behaviour.current_direction)
 
 func clear_conditions():
 		animation_tree.set("parameters/conditions/idle", false)
@@ -41,7 +42,8 @@ func update_direction(direction: float):
 		turn_right()
 
 func turn_left():
-	sprite.flip_h = true;
+	if is_instance_valid(sprite):
+		sprite.flip_h = true;
 
 func turn_right():
 	sprite.flip_h = false;

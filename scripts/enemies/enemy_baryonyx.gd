@@ -24,15 +24,18 @@ _left_ray_cast:RayCast2D, _right_ray_cast:RayCast2D):
 func update(delta: float):
 	if is_alive:
 		behaviour.steer_enemy(delta)
-	else:
-		body.velocity.x = body.velocity.x * 0.2
+	elif is_dying:
+		if body != null:
+			body.velocity.x = body.velocity.x * 0.2
+	elif is_dead:
+		if body != null:
+			body.velocity.x = body.velocity.x * 0.2
 	animation.update_animation(behaviour)
 	
 
 
 func kill_enemy() -> void:
 	is_alive = false
-	print("Baryonyx roars as it dies!")
 
 func move(direction: Vector2):
 	print("Baryonyx stomps towards:", direction)

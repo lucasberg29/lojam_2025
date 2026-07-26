@@ -23,6 +23,7 @@ func update(_delta: float):
 func hit_enemy(_damage: int):
 	health -= _damage
 	if health <= 0:
+		health = 0
 		kill_enemy()
 		is_dying = true
 		is_alive = false
@@ -35,7 +36,7 @@ func kill_enemy():
 	body.velocity.x = 0
 
 func move(_direction: Vector2):
-	print("Enemy base class updating! YOU SHOULD NOT SEE THIS!")
+	pass
 
 func resume_behaviour():
 	pass

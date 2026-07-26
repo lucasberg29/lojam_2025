@@ -1,5 +1,6 @@
-[gd_scene load_steps=55 format=3 uid="uid://cmnntpmpninp4"]
+[gd_scene load_steps=57 format=3 uid="uid://cmnntpmpninp4"]
 
+[ext_resource type="Shader" uid="uid://ccukr4tnemuye" path="res://shaders/enemy.gdshader" id="1_635mb"]
 [ext_resource type="Texture2D" uid="uid://c0jkblal7ygsr" path="res://assets/prehistoric dino game sprites ZIP/Png/Baryonyx/Attack_000.png" id="1_ijxv3"]
 [ext_resource type="Script" uid="uid://c6yryscrncmq6" path="res://scripts/enemies/enemy_body.gd" id="1_k8hqt"]
 [ext_resource type="Script" uid="uid://derq44qacap2j" path="res://scripts/enemies/enemy.gd" id="2_dhsud"]
@@ -42,6 +43,12 @@ metadata/_custom_type_script = "uid://derq44qacap2j"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhsud"]
 size = Vector2(109, 32)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_635mb"]
+shader = ExtResource("1_635mb")
+shader_parameter/scale_x = 1.2
+shader_parameter/is_dying = false
+shader_parameter/death_progress = 0.0
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dhsud"]
 animation = &"Dead"
@@ -225,8 +232,9 @@ shape = SubResource("RectangleShape2D_dhsud")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_635mb")
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("33_h726o")
+texture = ExtResource("27_gxtoo")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_sllnt")
